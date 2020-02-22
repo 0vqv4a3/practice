@@ -1,5 +1,7 @@
-let produk, jumlahBarang, totalHarga, kode1, jumlahBarang, totalSemua;
+/* // barang = Bar
+let produk, jumlahBar, totalHarga, inputKodeBar, jumlahBarang, totalSemua;
 
+// object constructor dan method untuk menginput data barang
 class Kasir {
 
   constructor(nama, kode, harga) {
@@ -9,25 +11,25 @@ class Kasir {
   }
 
   inputBarang() {
-    jumlahBarang = Number(prompt("mau berapa ?"));
-    if (jumlahBarang <= 0) {
+    jumlahBar = Number(prompt("mau berapa ?"));
+    if (jumlahBar <= 0) {
       this.inputBarang
     }
   }
 
   total() {
-    this.totalHarga = jumlahBarang * this.hargaBarang;
+    this.totalHarga = jumlahBar * this.hargaBarang;
     totalSemua += this.totalHarga;
     let x = confirm(`${totalHarga} tekan ok untuk membeli!`);
-    if
   }
+
   totalSemua(totalSemua) {
     confirm(`Total ${totalSemua}`);
   }
 
   uangKembalian(uang) {
     uang = prompt("masukkan uang");
-    uang = Number(jumlahBarang);
+    uang = Number(jumlahBar);
 
     if (uang === String || uang === undefined || uang === false || uang <= 0) {
       this.uangKembalian();
@@ -52,32 +54,47 @@ class Kasir {
 
 
 
-
+//input data barang ke kasir
 const barg1 = new Kasir(`bembeng`, 0, 2500);
 const barg2 = new Kasir(`paseo`, 1, 11000);
 const barg3 = new Kasir(`pocky`, 2, 7500);
 const barg4 = new Kasir(`mouse`, 3, 120000);
 const barg5 = new Kasir(`keyboard`, 4, 200000);
 
+// function saat tombol kasir ditekan
 function beli() {
   kode1 = prompt("masukkan kode");
   kode1 = Number(kode1);
-  if (kode1 === barg1.kodeBarang) {
+  if (inputKodeBar === barg1.kodeBarang) {
     barg1.pembayaran();
-  } else if (kode1 === barg2.kodeBarang) {
+  } else if (inputKodeBar === barg2.kodeBarang) {
     barg2.pembayaran();
-  } else if (kode1 === barg3.kodeBarang) {
+  } else if (inputKodeBar === barg3.kodeBarang) {
     barg3.pembayaran();
-  } else if (kode1 === barg4.kodeBarang) {
+  } else if (inputKodeBar === barg4.kodeBarang) {
     barg4.pembayaran();
-  } else if (kode1 === barg5.kodeBarang) {
+  } else if (inputKodeBar === barg5.kodeBarang) {
     barg5.pembayaran();
-  } else if (kode1 === barg3.kodeBarang) {
+  } else if (inputKodeBar === barg3.kodeBarang) {
     barg6.pembayaran();
-  } else if (kode1 === barg3.kodeBarang) {
+  } else if (inputKodeBar === barg3.kodeBarang) {
     barg7.pembayaran();
   } else {
     alert(`kode yang anda masukkan tidak terdaftar!`);
   }
   confirm
-}
+} */
+
+
+
+
+
+/* let doll = document.querySelector("#inputKode").addEventListener("submit", past());
+let x = document.querySelector("#liat");
+const c = document.querySelector("#barCode")
+
+function past() {
+  let ini = c.value;
+  document.querySelector("#liat").innerText = ini;
+
+} */
