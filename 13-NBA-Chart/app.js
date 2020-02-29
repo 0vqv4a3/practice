@@ -90,10 +90,9 @@ const warriorsGames = [
 // and give it class through JS
 //**************************************************************************
 
-const ulParent = document.createElement("ul");
 const makeChart = (games, targetTeam) => {
+  const ulParent = document.createElement("ul");
   for (let game of games) {
-    const { homeTeam, awayTeam } = game;
     const gameLi = document.createElement("li");
     gameLi.innerHTML = getScoreLine(game);
     gameLi.classList.add(isWinner(game, targetTeam) === true ? "win" : "loss");
@@ -123,10 +122,14 @@ const getScoreLine = ({ homeTeam, awayTeam }) => {
   return `${teamNames} ${scoreLine}`;
 };
 
+// select section Tag
 const houstonSection = document.querySelector("#hs");
 const gsSection = document.querySelector("#gs");
+
+// make 2 chart based on each target team
 const gsChart = makeChart(warriorsGames, "Golden State");
 const hrChart = makeChart(warriorsGames, "Houston");
 
+// append to each section in html
 gsSection.appendChild(gsChart);
 houstonSection.appendChild(hrChart);
