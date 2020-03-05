@@ -4,18 +4,27 @@ const fakeRequest = (url) => {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
 			const pages = {
-				'/users' : [
-					{ id: 1, username: 'Bilbo' },
-					{ id: 5, username: 'Esmerelda' }
+				'/users': [{
+						id: 1,
+						username: 'Bilbo'
+					},
+					{
+						id: 5,
+						username: 'Esmerelda'
+					}
 				],
-				'/about' : 'This is the about page!'
+				'/about': 'This is the about page!'
 			};
 			const data = pages[url];
 			if (data) {
-				resolve({ status: 200, data }); //resolve with a value!
-			}
-			else {
-				reject({ status: 404 }); //reject with a value!
+				resolve({
+					status: 200,
+					data
+				}); //resolve with a value!
+			} else {
+				reject({
+					status: 404
+				}); //reject with a value!
 			}
 		}, 1000);
 	});

@@ -6,6 +6,7 @@ const selectOne = document.querySelector('#select');
 
 signupForm.addEventListener('submit', function (e) {
     /*   alert('PREVENT FORM SUBMITTED'); */
+
     e.preventDefault();
     console.log(cc.value);
     console.log(checkBox.checked);
@@ -20,9 +21,12 @@ const ke = document.querySelector('#tl');
 ke.addEventListener('keypress', function (e) {
     if (e.key === "Enter") {
         const newItem = this.value;
-        const ini = document.createElement('li');
-        ini.innerText = newItem;
-        sel.appendChild(ini);
+        const angka = /[\d]/g;
+        if (angka.test(newItem)) {
+            const ini = document.createElement('li');
+            ini.innerText = newItem;
+            sel.appendChild(ini);
+        }
         this.value = '';
     }
 });
